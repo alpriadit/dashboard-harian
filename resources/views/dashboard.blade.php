@@ -14,8 +14,8 @@
 		<link rel="stylesheet" href="{{ asset('css/dashboard.css') }}" />
 		<link rel="stylesheet" href="{{ asset('css/app.css') }}" />
 		<link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
-		<link href="https://cdn.datatables.net/2.1.7/css/dataTables.bootstrap5.css" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css">
+		{{-- <link href="https://cdn.datatables.net/2.1.7/css/dataTables.bootstrap5.css" rel="stylesheet"> --}}
+		{{-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css"> --}}
 	</head>
 	<body>
 		<div id="app" data-get-data-url="{{ url('/getData') }}"></div>
@@ -343,7 +343,7 @@
 											<div class="data-tables">
 												<table id="dataTableDua" class="table table-striped table-bordered text-center nowrap"
 												style="width: 100%">
-													<thead class="bg-light text-capitalize">
+													<thead class="bg-dark text-capitalize">
 														<tr>
 															<th class="text-uppercase">
 																jam
@@ -370,7 +370,7 @@
 											<div class="data-tables">
 												<table id="dataTableTiga" class="table table-striped table-bordered text-center nowrap"
 												style="width: 100%">
-													<thead class="bg-light text-capitalize">
+													<thead class="bg-dark text-capitalize">
 														<tr>
 															<th class="text-uppercase">
 																jam

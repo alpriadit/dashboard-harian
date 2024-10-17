@@ -208,13 +208,6 @@ $(function () {
                             },
                             tooltip: {
                                 theme: "dark",
-                                x: {
-                                    formatter: function (val) {
-                                        return moment(new Date(val)).format(
-                                            "HH:mm:ss"
-                                        );
-                                    },
-                                },
                             },
                             yaxis: {
                                 decimalsInFloat: 2,
@@ -278,6 +271,13 @@ $(function () {
                             },
                             markers: {
                                 size: 1,
+                            },
+                            tooltip: {
+                                y: {
+                                    formatter: function (val) {
+                                        return val + " lbr";
+                                    },
+                                },
                             },
                             xaxis: {
                                 // categories: ar_jam_rekap.map((jam) => `${jam}:00`),
@@ -524,5 +524,5 @@ $(function () {
 
     window.setInterval(function () {
         loadDataP2apst();
-    }, 300000);
+    }, 3600000);
 });

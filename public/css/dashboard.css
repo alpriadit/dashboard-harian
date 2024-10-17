@@ -374,4 +374,45 @@ legend {
   /* Mengatur maksimal tinggi */
   overflow-y: auto;
   /* Membuat scroll vertikal */
+  background-color: #1B213B;
+  color: #777;
+  font-family: Montserrat, Arial, sans-serif;
+}
+
+table.dataTable {
+  background-color: #1B213B;
+  border-color: #262D47;
+}
+
+/* Header untuk tabel P2APST (dataTableSatu) */
+#dataTableSatu thead th {
+  background-color: #036FA1; /* Warna biru untuk P2APST */
+  color: #fff; /* Warna teks putih */
+  border-color: #1B213B;
+  border-top: 1px solid #1B213B;
+}
+
+/* Header untuk tabel CARGO (dataTableDua) */
+#dataTableDua thead th {
+  background-color: #ad22b2; /* Warna ungu untuk CARGO */
+  color: #fff; /* Warna teks putih */
+  border-color: #1B213B;
+  border-top: 1px solid #1B213B;
+}
+
+/* Header untuk tabel AP2T (dataTableTiga) */
+#dataTableTiga thead th {
+  background-color: #028d25; /* Warna hijau untuk AP2T */
+  color: #fff; /* Warna teks putih */
+  border-color: #1B213B;
+  border-top: 1px solid #1B213B;
+}
+
+table.dataTable tbody td {
+  background-color: #1B213B;
+  color: #fff;
+}
+
+table.dataTable thead tr {
+  border-bottom: 1px solid #262D47;
 }
