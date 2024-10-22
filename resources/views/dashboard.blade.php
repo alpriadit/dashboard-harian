@@ -31,6 +31,12 @@
 			<div class="content-area">
 				<div class="container-fluid">
 					<div class="row">
+						<div class="col-md-12" style="margin-top: 1rem">
+							<div id="runningText" style="font-size: 18px; color: white; text-align: center;"></div>
+						</div>
+					</div>
+
+					<div class="row">
 						<div class="col-lg-8">
 							<div class="main">
 								<div class="row mt-4">

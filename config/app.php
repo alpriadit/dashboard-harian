@@ -55,8 +55,7 @@ return [
     |
     */
 
-    // 'url' => env('APP_URL', 'http://' . $_SERVER['SERVER_ADDR'] . '/dashboard-harian'),
-    'url' => env('APP_URL', 'http://' . ($_SERVER['SERVER_ADDR'] ?? '10.2.159.135') . '/dashboard-harian'),
+    'url' => env('APP_URL', 'http://' . $_SERVER['SERVER_ADDR'] . '/dashboard-harian'),
 
     'asset_url' => env('ASSET_URL'),
 

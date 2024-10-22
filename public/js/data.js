@@ -525,4 +525,17 @@ $(function () {
     window.setInterval(function () {
         loadDataP2apst();
     }, 3600000);
+
+    function updateRunningText() {
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        const now = new Date();
+        const dayDate = now.toLocaleDateString('id-ID', options);
+        const time = now.toLocaleTimeString('id-ID');
+        
+        document.getElementById('runningText').textContent = `Hari: ${dayDate}, Jam: ${time}`;
+     }
+     
+     updateRunningText();
+     
+     setInterval(updateRunningText, 1000);
 });

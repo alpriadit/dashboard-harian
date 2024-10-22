@@ -416,3 +416,12 @@ table.dataTable tbody td {
 table.dataTable thead tr {
   border-bottom: 1px solid #262D47;
 }
+
+#runningText {
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  background-color: #262D47; /* Bisa diubah sesuai warna yang diinginkan */
+  padding: 10px;
+  border-radius: 5px;
+}
