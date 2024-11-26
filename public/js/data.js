@@ -1,18 +1,12 @@
 $(function () {
-    $("#dataTableSatu, #dataTableDua, #dataTableTiga").DataTable({
-        scrollX: true,
-        order: false,
-        paging: false,
-        searching: false,
-    });
 
     loadDataP2apst();
     function loadDataP2apst() {
-        var getDataUrl = $('#app').data('get-data-url');
+        // var getDataUrl = $('#app').data('get-data-url');
         const csrfToken = $('meta[name="csrf-token"]').attr("content");
         munculLoading();
         $.ajax({
-            url: getDataUrl,
+            url: '/getData',
             type: "POST",
             headers: {
                 "X-CSRF-TOKEN": csrfToken,
@@ -522,20 +516,4 @@ $(function () {
         $("#overlay").css("display", "none");
     }
 
-    window.setInterval(function () {
-        loadDataP2apst();
-    }, 3600000);
-
-    function updateRunningText() {
-        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-        const now = new Date();
-        const dayDate = now.toLocaleDateString('id-ID', options);
-        const time = now.toLocaleTimeString('id-ID');
-        
-        document.getElementById('runningText').textContent = `Hari: ${dayDate}, Jam: ${time}`;
-     }
-     
-     updateRunningText();
-     
-     setInterval(updateRunningText, 1000);
 });

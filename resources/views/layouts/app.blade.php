@@ -28,23 +28,24 @@
 			<!-- Navigation Menu -->
 			<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin-bottom: 0px">
 				<div class="container-fluid" id="container-nav">
-					{{-- <a class="navbar-brand" href="#">Dashboard</a>
+					<a class="navbar-brand" href="#">Dashboard</a>
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
 						<span class="navbar-toggler-icon"></span>
-					</button> --}}
+					</button>
 					<div class="collapse navbar-collapse" id="navbarNav">
 						<ul class="navbar-nav">
 							<li class="nav-item">
-								<a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="{{ route('dashboard.transaksi') }}">Dashboard Transaksi Harian H-0</a>
+								<a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="{{ route('dashboard.transaksi') }}">Transaksi Harian H-0</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link {{ request()->is('dashboard-rekon') ? 'active' : '' }}" href="{{ route('dashboard.rekon') }}">Dashboard Rekon Naik</a>
+								<a class="nav-link {{ request()->is('dashboard-rekon') ? 'active' : '' }}" href="{{ route('dashboard.rekon') }}">Rekon Naik</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link {{ request()->is('proses-rekon') ? 'active' : '' }}" href="{{ route('proses.rekon') }}">Proses Rekon Naik</a>
 							</li>
 						</ul>
 					</div>
+                    <div id="runningText" style="font-size: 18px; color: white; text-align: center;"></div>
 				</div>
 			</nav>
 	
@@ -61,7 +62,8 @@
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
 		<script src="{{ asset('vendor/apexcharts/apexcharts.js') }}"></script>
-		<script src="{{ asset('js/data.js') }}"></script>
+		<script src="{{ asset('js/app.js') }}"></script>
+		@yield('js')
 		{{-- end js --}}
 
 	</body>

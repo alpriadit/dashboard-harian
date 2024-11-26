@@ -28,7 +28,7 @@ strong {
 .content-area {
   width: 90%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0px;
   box-sizing: border-box;
 }
 
@@ -386,24 +386,30 @@ table.dataTable {
 
 /* Header untuk tabel P2APST (dataTableSatu) */
 #dataTableSatu thead th {
-  background-color: #036FA1; /* Warna biru untuk P2APST */
-  color: #fff; /* Warna teks putih */
+  background-color: #036FA1;
+  /* Warna biru untuk P2APST */
+  color: #fff;
+  /* Warna teks putih */
   border-color: #1B213B;
   border-top: 1px solid #1B213B;
 }
 
 /* Header untuk tabel CARGO (dataTableDua) */
 #dataTableDua thead th {
-  background-color: #ad22b2; /* Warna ungu untuk CARGO */
-  color: #fff; /* Warna teks putih */
+  background-color: #ad22b2;
+  /* Warna ungu untuk CARGO */
+  color: #fff;
+  /* Warna teks putih */
   border-color: #1B213B;
   border-top: 1px solid #1B213B;
 }
 
 /* Header untuk tabel AP2T (dataTableTiga) */
 #dataTableTiga thead th {
-  background-color: #028d25; /* Warna hijau untuk AP2T */
-  color: #fff; /* Warna teks putih */
+  background-color: #028d25;
+  /* Warna hijau untuk AP2T */
+  color: #fff;
+  /* Warna teks putih */
   border-color: #1B213B;
   border-top: 1px solid #1B213B;
 }
@@ -421,7 +427,29 @@ table.dataTable thead tr {
   font-weight: bold;
   font-size: 16px;
   color: #fff;
-  background-color: #262D47; /* Bisa diubah sesuai warna yang diinginkan */
+  background-color: #262D47;
+  /* Bisa diubah sesuai warna yang diinginkan */
   padding: 10px;
   border-radius: 5px;
+}
+
+.navbar {
+  background-color: #262D47 !important;
+  font-size: larger;
+}
+
+.nav-link.active {
+  background-color: #1B213B !important;
+  color: #ffffff !important;
+  font-weight: bold;
+  border-radius: 5px;
+  margin: 0 2rem 0 2rem;
+}
+
+#container-nav {
+  background-color: #262D47 !important;
+}
+
+#container-base {
+  padding: 0px;
 }
