@@ -10,43 +10,25 @@ class RekonController extends Controller
 {
     public function getRekon(Request $request)
     {
-        $model = new Rekon();
-
-        $dataDKRP = $this->getDKRP();
-        $dataDBP = $this->getDBP();
-        $dataPRR = $this->getPRR();
-        $dataLANCAR = $this->getLANCAR();
-        $dataDPH = $this->getDPH();
+        $data = [
+            'dkrp' => $this->getDataBySource('DKRP'),
+            'dbp' => $this->getDataBySource('DBP'),
+            'prr' => $this->getDataBySource('PRR'),
+            'lancar' => $this->getDataBySource('LANCAR'),
+            'dph' => $this->getDataBySource('DPH'),
+        ];
 
         return response()->json([
             'success' => true,
-            'data' => [
-                'dkrp' => $dataDKRP,
-                'dbp' => $dataDBP,
-                'prr' => $dataPRR,
-                'lancar' => $dataLANCAR,
-                'dph' => $dataDPH,
-            ]
+            'data' => $data,
         ]);
     }
 
-    public function getDKRP(){
-        return Rekon::where('SUMBER', 'DKRP')->get();
+    private function getDataBySource($source)
+    {
+        return Rekon::where('SUMBER', $source)
+            ->where(DB::raw("tgl"), 'LIKE', DB::raw("TO_CHAR(SYSDATE, 'YYYYMM') || '%'"))
+            ->get();
     }
 
-    public function getDBP(){
-        return Rekon::where('SUMBER', 'DBP')->get();
-    }
-
-    public function getPRR(){
-        return Rekon::where('SUMBER', 'PRR')->get();
-    }
-
-    public function getLANCAR(){
-        return Rekon::where('SUMBER', 'LANCAR')->get();
-    }
-
-    public function getDPH(){
-        return Rekon::where('SUMBER', 'DPH')->get();
-    }
 }
